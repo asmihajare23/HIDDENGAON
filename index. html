@@ -1,1 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>HiddenGaon — Making Invisible Problems Visible</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        Hidden<span>Gaon</span>
+    </a>
+
+    <nav>
+        <a href="#explore">Explore</a>
+        <a href="#insights">Insights</a>
+        <a href="#stories">Stories</a>
+        <a href="#solutions">Solutions</a>
+    </nav>
+
+    <a href="#report" class="nav-button">
+        + Share Problem
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            COMMUNITY • VOICE • ACTION
+        </p>
+
+        <h1>
+            Some problems are visible.
+            <br>
+            <span>Some are simply accepted.</span>
+        </h1>
+
+        <p class="hero-description">
+            HiddenGaon helps rural communities discover, share and understand
+            everyday problems that often go unnoticed.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#explore" class="primary-button">
+                Explore Problems →
+            </a>
+
+            <a href="#report" class="secondary-button">
+                Share Your Experience
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="sun"></div>
+
+        <div class="hill hill-one"></div>
+        <div class="hill hill-two"></div>
+
+        <div class="house house-one">🏠</div>
+        <div class="house house-two">🏡</div>
+
+        <div class="tree tree-one">🌳</div>
+        <div class="tree tree-two">🌳</div>
+
+        <div class="floating-card">
+            <small>HIDDEN PROBLEM</small>
+            <strong>Waste collection</strong>
+            <span>Reported by community</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="container intro-grid">
+
+        <div>
+            <p class="eyebrow">WHY HIDDEN GAON?</p>
+
+            <h2>
+                What exists on paper
+                <br>
+                isn't always what people experience.
+            </h2>
+        </div>
+
+        <div class="intro-text">
+
+            <p>
+                A hospital may exist, but reaching it may be difficult.
+                A smartphone may exist, but using digital services may not
+                be easy.
+            </p>
+
+            <p>
+                HiddenGaon looks beyond visible infrastructure and asks:
+            </p>
+
+            <strong>
+                "What problems have people simply learned to live with?"
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VISIBLE VS HIDDEN ================= -->
+
+<section class="comparison">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">LOOK CLOSER</p>
+
+            <h2>
+                The problem behind
+                <span>the problem.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="comparison-grid">
+
+            <div class="compare-card visible">
+
+                <div class="compare-label">
+                    VISIBLE
+                </div>
+
+                <div class="compare-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    A healthcare centre exists.
+                </h3>
+
+                <p>
+                    The facility is visible on the map.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="compare-card hidden">
+
+                <div class="compare-label">
+                    HIDDEN
+                </div>
+
+                <div class="compare-icon">
+                    🚶
+                </div>
+
+                <h3>
+                    Reaching it isn't easy.
+                </h3>
+
+                <p>
+                    Distance, transportation or accessibility
+                    may make the service difficult to use.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="mini-comparisons">
+
+            <div>
+                <span>📱</span>
+                <strong>Smartphone exists</strong>
+                <small>Digital service may still be difficult to use.</small>
+            </div>
+
+            <div>
+                <span>🚻</span>
+                <strong>Toilet exists</strong>
+                <small>Water, maintenance or accessibility may be missing.</small>
+            </div>
+
+            <div>
+                <span>🌾</span>
+                <strong>Crop is produced</strong>
+                <small>Getting a fair market opportunity can be difficult.</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPLORE ================= -->
+
+<section class="explore" id="explore">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">EXPLORE</p>
+
+            <h2>
+                What is hidden?
+            </h2>
+
+            <p>
+                Explore the everyday challenges communities may experience.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <div class="category-card" data-category="Food">
+
+                <div class="category-icon">🍚</div>
+
+                <h3>Food</h3>
+
+                <p>
+                    Nutrition, food access, storage and wastage.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Waste">
+
+                <div class="category-icon">🗑️</div>
+
+                <h3>Garbage & Waste</h3>
+
+                <p>
+                    Collection, segregation and disposal.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Farmers">
+
+                <div class="category-icon">🌾</div>
+
+                <h3>Farmers</h3>
+
+                <p>
+                    Markets, storage, transport and information.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Water">
+
+                <div class="category-icon">💧</div>
+
+                <h3>Water</h3>
+
+                <p>
+                    Availability, quality and access.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Healthcare">
+
+                <div class="category-icon">🏥</div>
+
+                <h3>Healthcare</h3>
+
+                <p>
+                    Access, distance and awareness.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Education">
+
+                <div class="category-icon">🎓</div>
+
+                <h3>Education</h3>
+
+                <p>
+                    Resources, opportunities and guidance.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Women">
+
+                <div class="category-icon">👩</div>
+
+                <h3>Women</h3>
+
+                <p>
+                    Health, privacy, mobility and opportunities.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+            <div class="category-card" data-category="Elderly">
+
+                <div class="category-icon">🧓</div>
+
+                <h3>Elderly</h3>
+
+                <p>
+                    Mobility, digital access and independence.
+                </p>
+
+                <span>Explore →</span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INSIGHTS ================= -->
+
+<section class="insights" id="insights">
+
+    <div class="container">
+
+        <div class="section-heading light">
+
+            <p class="eyebrow">COMMUNITY INSIGHTS</p>
+
+            <h2>
+                What are people saying?
+            </h2>
+
+            <p>
+                Sample dashboard — replace these numbers with your
+                actual field research.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard">
+
+
+            <div class="dashboard-main">
+
+                <div class="dashboard-header">
+
+                    <div>
+                        <small>COMMUNITY REPORTS</small>
+                        <h3>Top concerns</h3>
+                    </div>
+
+                    <div class="report-number">
+                        248
+                        <small>responses</small>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>Garbage & Waste</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:68%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>Transportation</span>
+                        <strong>61%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:61%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>Healthcare</span>
+                        <strong>54%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:54%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>Digital Literacy</span>
+                        <strong>47%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:47%"></span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="priority-card">
+
+                <small>PRIORITY BOARD</small>
+
+                <h3>
+                    Needs attention
+                </h3>
+
+                <div class="priority">
+                    <span>01</span>
+                    <p>Waste management</p>
+                </div>
+
+                <div class="priority">
+                    <span>02</span>
+                    <p>Transportation</p>
+                </div>
+
+                <div class="priority">
+                    <span>03</span>
+                    <p>Healthcare access</p>
+                </div>
+
+                <div class="priority">
+                    <span>04</span>
+                    <p>Digital literacy</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROBLEM JOURNEY ================= -->
+
+<section class="journey">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">FROM PROBLEM TO ACTION</p>
+
+            <h2>
+                What happens after
+                <span>you speak?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="journey-line">
+
+            <div class="journey-step">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon">🗣️</div>
+
+                <h3>Report</h3>
+
+                <p>
+                    A community member shares a problem.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon">🔎</div>
+
+                <h3>Understand</h3>
+
+                <p>
+                    The problem is categorized and studied.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon">🏛️</div>
+
+                <h3>Connect</h3>
+
+                <p>
+                    Relevant stakeholders can see the issue.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="step-number">04</div>
+
+                <div class="step-icon">🛠️</div>
+
+                <h3>Act</h3>
+
+                <p>
+                    Possible actions can be explored and tracked.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STORIES ================= -->
+
+<section class="stories" id="stories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">STORIES BEHIND THE NUMBERS</p>
+
+            <h2>
+                Real problems have
+                <span>real people behind them.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+            <article class="story-card">
+
+                <div class="story-top">
+
+                    <span>TRANSPORTATION</span>
+
+                    <span>ANONYMOUS</span>
+
+                </div>
+
+                <blockquote>
+                    "Getting to the hospital is harder than getting treatment."
+                </blockquote>
+
+                <p>
+                    An everyday transportation difficulty can become
+                    a healthcare access problem.
+                </p>
+
+            </article>
+
+
+            <article class="story-card">
+
+                <div class="story-top">
+
+                    <span>WASTE</span>
+
+                    <span>ANONYMOUS</span>
+
+                </div>
+
+                <blockquote>
+                    "The garbage is collected sometimes, but where should it go?"
+                </blockquote>
+
+                <p>
+                    Waste management is not only about collection.
+                    Disposal and segregation matter too.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOLUTIONS ================= -->
+
+<section class="solutions" id="solutions">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">POSSIBLE SOLUTIONS</p>
+
+            <h2>
+                Don't just find problems.
+                <span>Find possibilities.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="solution-grid">
+
+
+            <div class="solution-card">
+
+                <div class="solution-icon">
+                    🗑️
+                </div>
+
+                <h3>
+                    Waste
+                </h3>
+
+                <p>
+                    Segregation awareness, regular collection,
+                    responsible disposal and local clean-up initiatives.
+                </p>
+
+                <small>
+                    POSSIBLE STAKEHOLDERS
+                </small>
+
+                <strong>
+                    Gram Panchayat • Local organizations
+                </strong>
+
+            </div>
+
+
+            <div class="solution-card">
+
+                <div class="solution-icon">
+                    🌾
+                </div>
+
+                <h3>
+                    Farmers
+                </h3>
+
+                <p>
+                    Better access to market information,
+                    storage, transport and agricultural resources.
+                </p>
+
+                <small>
+                    POSSIBLE STAKEHOLDERS
+                </small>
+
+                <strong>
+                    Agriculture groups • FPOs • NGOs
+                </strong>
+
+            </div>
+
+
+            <div class="solution-card">
+
+                <div class="solution-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Digital Literacy
+                </h3>
+
+                <p>
+                    Simple tutorials, digital safety awareness
+                    and community learning sessions.
+                </p>
+
+                <small>
+                    POSSIBLE STAKEHOLDERS
+                </small>
+
+                <strong>
+                    Schools • NGOs • Community groups
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REPORT ================= -->
+
+<section class="report" id="report">
+
+    <div class="container report-container">
+
+        <div class="report-intro">
+
+            <p class="eyebrow">
+                YOUR VOICE MATTERS
+            </p>
+
+            <h2>
+                What's something
+                <span>people have stopped questioning?</span>
+            </h2>
+
+            <p>
+                Tell us about an everyday problem in your community.
+                Your response can help make an invisible problem visible.
+            </p>
+
+        </div>
+
+
+        <form id="problemForm">
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Problem category
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option>Food</option>
+                        <option>Waste</option>
+                        <option>Farmers</option>
+                        <option>Water</option>
+                        <option>Healthcare</option>
+                        <option>Education</option>
+                        <option>Transportation</option>
+                        <option>Women</option>
+                        <option>Elderly</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Village / Area
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter location"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    What is the problem?
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Describe the problem briefly"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Tell us more
+                </label>
+
+                <textarea
+                    placeholder="Who is affected? What happens?"
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-options">
+
+                <label class="checkbox">
+
+                    <input type="checkbox">
+
+                    Submit anonymously
+
+                </label>
+
+                <label class="upload">
+
+                    📷 Add photo
+
+                    <input
+                        type="file"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button submit-button"
+            >
+                Submit Community Report →
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <div class="container about-grid">
+
+        <div>
+
+            <p class="eyebrow">
+                ABOUT HIDDEN GAON
+            </p>
+
+            <h2>
+                We don't assume
+                the problem.
+                <span>We listen.</span>
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                HiddenGaon is a community-centered platform concept
+                developed to identify everyday rural problems through
+                observation, conversations and community participation.
+            </p>
+
+            <p>
+                The goal is simple:
+            </p>
+
+            <strong class="big-text">
+                Discover → Understand → Act
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#home" class="logo footer-logo">
+                Hidden<span>Gaon</span>
+            </a>
+
+            <p>
+                Making invisible rural problems visible.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#explore">Explore</a>
+            <a href="#insights">Insights</a>
+            <a href="#stories">Stories</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#report">Report</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            HiddenGaon © 2026
+        </span>
+
+        <span>
+            Community • Voice • Action
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+    class="modal"
+    id="categoryModal"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            id="closeModal"
+        >
+            ×
+        </button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Report submitted successfully.
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
