@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HiddenGaon | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background: #f5f3eb;
+        }
+
+        .admin-header {
+            background: #183a2b;
+            color: white;
+            padding: 25px 5%;
+        }
+
+        .admin-header-inner {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-logo {
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .admin-logo span {
+            color: #d19a55;
+        }
+
+        .back-button {
+            color: white;
+            border: 1px solid rgba(255,255,255,.3);
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+        }
+
+        .dashboard {
+            max-width: 1150px;
+            width: 92%;
+            margin: 50px auto;
+        }
+
+        .dashboard-title {
+            margin-bottom: 35px;
+        }
+
+        .dashboard-title h1 {
+            font-size: 48px;
+            margin-top: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            border: 1px solid #dedfd7;
+        }
+
+        .stat-card small {
+            color: #68736c;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            margin-top: 8px;
+        }
+
+        .reported {
+            color: #c55a45;
+        }
+
+        .verified {
+            color: #b07c35;
+        }
+
+        .progressing {
+            color: #49749a;
+        }
+
+        .addressed {
+            color: #348052;
+        }
+
+        .problems {
+            background: white;
+            border-radius: 22px;
+            padding: 30px;
+            border: 1px solid #dedfd7;
+        }
+
+        .problems-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .filter {
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .problem {
+            border-top: 1px solid #eee;
+            padding: 22px 0;
+            display: grid;
+            grid-template-columns:
+                1fr auto;
+            gap: 20px;
+        }
+
+        .problem-category {
+            font-size: 10px;
+            color: #a6783b;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .problem h3 {
+            margin: 5px 0;
+        }
+
+        .problem p {
+            color: #68736c;
+            font-size: 13px;
+        }
+
+        .problem-location {
+            font-size: 12px;
+            color: #68736c;
+            margin-top: 8px;
+        }
+
+        .status {
+            align-self: start;
+            padding: 7px 12px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .status-reported {
+            background: #fbe3de;
+            color: #a84936;
+        }
+
+        .status-verified {
+            background: #f8ecd2;
+            color: #95661e;
+        }
+
+        .status-progress {
+            background: #dfeaf3;
+            color: #376584;
+        }
+
+        .status-addressed {
+            background: #dcefe2;
+            color: #287045;
+        }
+
+        .stakeholder {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .stakeholder strong {
+            color: #285943;
+        }
+
+        @media(max-width:800px) {
+
+            .stats {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+        @media(max-width:550px) {
+
+            .stats {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .dashboard-title h1 {
+                font-size: 38px;
+            }
+
+            .problem {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="admin-header">
+
+    <div class="admin-header-inner">
+
+        <div class="admin-logo">
+
+            Hidden<span>Gaon</span>
+
+            <div style="
+                font-size:10px;
+                color:#a9c6b6;
+                letter-spacing:1px;
+                margin-top:3px;
+            ">
+
+                ADMIN DASHBOARD
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back-button"
+        >
+            ← Back to Website
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <div class="dashboard-title">
+
+        <div class="eyebrow">
+            COMMUNITY MANAGEMENT
+        </div>
+
+        <h1>
+            Problem Dashboard
+        </h1>
+
+        <p style="color:#68736c;">
+            Monitor, verify and track community-reported problems.
+        </p>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats">
+
+
+        <div class="stat-card">
+
+            <small>
+                TOTAL REPORTS
+            </small>
+
+            <div class="stat-number">
+                128
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <small>
+                REPORTED
+            </small>
+
+            <div class="stat-number reported">
+                42
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <small>
+                IN PROGRESS
+            </small>
+
+            <div class="stat-number progressing">
+                38
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <small>
+                ADDRESSED
+            </small>
+
+            <div class="stat-number addressed">
+                17
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- PROBLEM LIST -->
+
+    <div class="problems">
+
+
+        <div class="problems-header">
+
+            <div>
+
+                <h2>
+                    Recent Problems
+                </h2>
+
+                <p style="
+                    color:#68736c;
+                    font-size:13px;
+                ">
+                    Demo data — replace with field research.
+                </p>
+
+            </div>
+
+
+            <select class="filter">
+
+                <option>
+                    All Problems
+                </option>
+
+                <option>
+                    Reported
+                </option>
+
+                <option>
+                    Verified
+                </option>
+
+                <option>
+                    In Progress
+                </option>
+
+                <option>
+                    Addressed
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PROBLEM 1 -->
+
+        <div class="problem">
+
+            <div>
+
+                <div class="problem-category">
+                    WASTE
+                </div>
+
+                <h3>
+                    Garbage collection is irregular
+                </h3>
+
+                <p>
+                    Residents report that waste is not collected
+                    regularly from the area.
+                </p>
+
+                <div class="problem-location">
+                    📍 Village A
+                </div>
+
+                <div class="stakeholder">
+
+                    Possible stakeholder:
+
+                    <strong>
+                        Gram Panchayat / Local sanitation team
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="status status-reported">
+                🔴 Reported
+            </div>
+
+        </div>
+
+
+        <!-- PROBLEM 2 -->
+
+        <div class="problem">
+
+            <div>
+
+                <div class="problem-category">
+                    WATER
+                </div>
+
+                <h3>
+                    Water availability is inconsistent
+                </h3>
+
+                <p>
+                    Some households report difficulty accessing
+                    reliable water supply.
+                </p>
+
+                <div class="problem-location">
+                    📍 Village B
+                </div>
+
+                <div class="stakeholder">
+
+                    Possible stakeholder:
+
+                    <strong>
+                        Local administration / Water department
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="status status-verified">
+                🟡 Verified
+            </div>
+
+        </div>
+
+
+        <!-- PROBLEM 3 -->
+
+        <div class="problem">
+
+            <div>
+
+                <div class="problem-category">
+                    TRANSPORTATION
+                </div>
+
+                <h3>
+                    Limited transportation to healthcare
+                </h3>
+
+                <p>
+                    Residents experience difficulty reaching
+                    healthcare services due to limited transport.
+                </p>
+
+                <div class="problem-location">
+                    📍 Village C
+                </div>
+
+                <div class="stakeholder">
+
+                    Possible stakeholder:
+
+                    <strong>
+                        Local administration / Transport services
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="status status-progress">
+                🟠 In Progress
+            </div>
+
+        </div>
+
+
+        <!-- PROBLEM 4 -->
+
+        <div class="problem">
+
+            <div>
+
+                <div class="problem-category">
+                    FARMERS
+                </div>
+
+                <h3>
+                    Difficulty accessing market information
+                </h3>
+
+                <p>
+                    Farmers may not always have easy access to
+                    current market and agricultural information.
+                </p>
+
+                <div class="problem-location">
+                    📍 Village A
+                </div>
+
+                <div class="stakeholder">
+
+                    Possible stakeholder:
+
+                    <strong>
+                        Agriculture groups / FPOs / NGOs
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="status status-addressed">
+                🟢 Addressed
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+</html>
