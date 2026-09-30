@@ -1,1 +1,192 @@
+### `login.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maza Gaon - Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #dff5d8, #a8d5a2);
+        }
+
+        .login-box {
+            width: 380px;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2e7d32;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #2e7d32;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="logo">🌱 Maza Gaon</div>
+
+        <div class="subtitle">
+            Welcome to your village community
+        </div>
+
+        <form onsubmit="login(event)">
+
+            <label>Email / Mobile Number</label>
+            <input 
+                type="text" 
+                id="username"
+                placeholder="Enter email or mobile number"
+                required
+            >
+
+            <label>Password</label>
+            <input 
+                type="password" 
+                id="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <div id="message"></div>
+
+        <div class="register">
+            Don't have an account?
+            <a href="#">Register</a>
+        </div>
+
+    </div>
+
+    <script>
+
+        function login(event) {
+
+            event.preventDefault();
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (username === "admin" && password === "1234") {
+
+                message.style.color = "green";
+                message.innerHTML = "Login successful!";
+
+                // Later you can redirect to dashboard
+                // window.location.href = "dashboard.html";
+
+            } else {
+
+                message.style.color = "red";
+                message.innerHTML = "Invalid username or password.";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+```
+
+### How to run it
+
+1. Create a folder called **MazaGaon**.
+2. Inside it create a file named **`login.html`**.
+3. Paste the code.
+4. Save it.
+5. Open `login.html` in Chrome.
+
+For testing:
+
+**Username:** `admin`
+**Password:** `1234`
+
+This is only a **front-end demonstration login**. For your actual CEP project, we should later connect it to a **database/backend**, so villagers can actually register and log in securely.
+
+For your final **Maza Gaon** website, we can also add the **Marathi / हिंदी / English language selector directly on the login page**.
 
