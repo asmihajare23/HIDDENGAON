@@ -1,317 +1,289 @@
-Save this as **`login.html`**:
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Maza Gaon | Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", Arial, sans-serif;
-        }
+<title>Maza Gaon | Login & Sign Up</title>
 
-        body {
-            min-height: 100vh;
-            overflow: hidden;
-            background: linear-gradient(
-                to bottom,
-                #87CEEB 0%,
-                #c8f0ff 45%,
-                #d8f3c5 100%
-            );
-        }
+<style>
 
-        /* ---------------- BACKGROUND ---------------- */
+/* =========================
+   BASIC RESET
+========================= */
 
-        .scene {
-            position: fixed;
-            inset: 0;
-            overflow: hidden;
-            z-index: -1;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
 
-        /* Sun */
+body {
+    min-height: 100vh;
+    overflow: hidden;
 
-        .sun {
-            position: absolute;
-            width: 110px;
-            height: 110px;
-            background: #FFD54F;
-            border-radius: 50%;
-            top: 9%;
-            right: 12%;
-            box-shadow: 0 0 60px #FFD54F;
-            animation: sunGlow 3s infinite alternate;
-        }
+    background:
+        linear-gradient(
+            180deg,
+            #82d5ff 0%,
+            #d9f5ff 48%,
+            #b7df91 100%
+        );
+}
 
-        @keyframes sunGlow {
-            from {
-                box-shadow: 0 0 40px #FFD54F;
-            }
 
-            to {
-                box-shadow: 0 0 80px #FFD54F;
-            }
-        }
+/* =========================
+   VILLAGE BACKGROUND
+========================= */
 
-        /* Clouds */
+.scene {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
 
-        .cloud {
-            position: absolute;
-            width: 150px;
-            height: 50px;
-            background: rgba(255,255,255,0.75);
-            border-radius: 50px;
-            filter: blur(1px);
-        }
 
-        .cloud::before,
-        .cloud::after {
-            content: "";
-            position: absolute;
-            background: inherit;
-            border-radius: 50%;
-        }
+/* SUN */
 
-        .cloud::before {
-            width: 70px;
-            height: 70px;
-            left: 25px;
-            bottom: 10px;
-        }
+.sun {
+    position: absolute;
 
-        .cloud::after {
-            width: 55px;
-            height: 55px;
-            right: 25px;
-            bottom: 10px;
-        }
+    width: 120px;
+    height: 120px;
 
-        .cloud1 {
-            top: 15%;
-            left: -180px;
-            animation: moveCloud 30s linear infinite;
-        }
+    top: 8%;
+    right: 12%;
 
-        .cloud2 {
-            top: 28%;
-            left: -250px;
-            transform: scale(.7);
-            animation: moveCloud 42s linear infinite;
-            animation-delay: 8s;
-        }
+    border-radius: 50%;
 
-        @keyframes moveCloud {
-            from {
-                left: -250px;
-            }
+    background: #FFD95A;
 
-            to {
-                left: 110%;
-            }
-        }
+    box-shadow:
+        0 0 35px #FFD95A,
+        0 0 80px rgba(255,217,90,.5);
 
-        /* Hills */
+    animation: sunGlow 4s infinite alternate;
+}
 
-        .hill {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 260px;
-            background: #4f8f46;
-            border-radius: 50% 50% 0 0;
-        }
+@keyframes sunGlow {
 
-        .hill.back {
-            bottom: 40px;
-            background: #76a85e;
-            transform: scale(1.2);
-        }
+    from {
+        transform: scale(1);
+    }
 
-        /* Fields */
+    to {
+        transform: scale(1.08);
+    }
 
-        .field {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 150px;
-            background:
-                repeating-linear-gradient(
-                    165deg,
-                    #397a32 0px,
-                    #397a32 8px,
-                    #4e913d 8px,
-                    #4e913d 18px
-                );
-            clip-path: polygon(
-                0 35%,
-                100% 5%,
-                100% 100%,
-                0 100%
-            );
-        }
+}
 
-        /* ---------------- LOGIN CARD ---------------- */
 
-        .container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+/* CLOUDS */
 
-        .login-card {
-            width: 420px;
-            padding: 38px;
-            border-radius: 28px;
+.cloud {
+    position: absolute;
 
-            background: rgba(255,255,255,0.82);
+    width: 150px;
+    height: 45px;
 
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
+    background: rgba(255,255,255,.75);
 
-            border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50px;
 
-            box-shadow:
-                0 25px 60px rgba(0,0,0,0.18);
+    filter: blur(.5px);
+}
 
-            animation: cardAppear 1s ease;
-        }
+.cloud::before,
+.cloud::after {
 
-        @keyframes cardAppear {
+    content: "";
 
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(.95);
-            }
+    position: absolute;
 
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+    background: inherit;
 
-        /* Logo */
+    border-radius: 50%;
 
-        .logo {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+}
 
-        .logo-icon {
-            width: 75px;
-            height: 75px;
+.cloud::before {
 
-            margin: auto;
+    width: 70px;
+    height: 70px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    left: 25px;
+    bottom: 8px;
 
-            border-radius: 22px;
+}
 
-            background: linear-gradient(
-                135deg,
-                #2e7d32,
-                #66bb6a
-            );
+.cloud::after {
 
-            font-size: 40px;
+    width: 55px;
+    height: 55px;
 
-            box-shadow:
-                0 10px 25px rgba(46,125,50,.3);
+    right: 20px;
+    bottom: 8px;
 
-            animation: float 3s ease-in-out infinite;
-        }
+}
 
-        @keyframes float {
 
-            0%,100% {
-                transform: translateY(0);
-            }
+.cloud1 {
 
-            50% {
-                transform: translateY(-8px);
-            }
-        }
+    top: 15%;
+    left: -200px;
 
-        .logo h1 {
-            margin-top: 12px;
-            color: #245c28;
-            font-size: 30px;
-        }
+    animation:
+        cloudMove 35s linear infinite;
 
-        .logo p {
-            color: #657267;
-            font-size: 13px;
-            margin-top: 4px;
-        }
+}
 
-        /* Language */
 
-        .language {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 22px;
-        }
+.cloud2 {
 
-        .language button {
-            border: none;
-            background: transparent;
-            padding: 7px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            color: #527157;
-            font-size: 12px;
-        }
+    top: 28%;
+    left: -300px;
 
-        .language button.active {
-            background: #e2f3df;
-            color: #28702e;
-            font-weight: bold;
-        }
+    transform: scale(.7);
 
-        /* Inputs */
+    animation:
+        cloudMove 45s linear infinite;
 
-        .input-group {
-            margin-bottom: 18px;
-        }
+    animation-delay: 8s;
 
-        .input-group label {
-            display: block;
-            margin-bottom: 7px;
-            color: #344638;
-            font-size: 13px;
-            font-weight: 600;
-        }
+}
 
-        .input-box {
-            position: relative;
-        }
 
-        .input-box span {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 18px;
-        }
+@keyframes cloudMove {
 
-        .input-box input {
-            width: 100%;
-            padding: 14px 45px;
+    from {
+        left: -300px;
+    }
 
-            border: 1px solid #d5e1d4;
-            border-radius: 13px;
+    to {
+        left: 110%;
+    }
 
-            outline: none;
+}
+
+
+/* HILLS */
+
+.hill {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 240px;
+
+    background: #4d9148;
+
+    border-radius: 50% 50% 0 0;
+
+}
+
+.hill.back {
+
+    bottom: 45px;
+
+    background: #75a85d;
+
+    transform: scale(1.3);
+
+}
+
+
+/* FARM */
+
+.farm {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 150px;
+
+    background:
+        repeating-linear-gradient(
+            165deg,
+            #347632 0px,
+            #347632 9px,
+            #4b8e3d 9px,
+            #4b8e3d 18px
+        );
+
+    clip-path: polygon(
+        0 30%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.wrapper {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    width: 900px;
+    min-height: 560px;
+
+    display: flex;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,.82);
+
+    backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.2);
+
+    animation:
+        cardAppear 1s ease;
+
+}
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
 ```
