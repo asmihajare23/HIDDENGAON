@@ -1,1 +1,211 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Report a Problem | Maza Gaon</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">🌱 Maza Gaon</div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agriculture.html">Agriculture</a>
+        <a href="healthcare.html">Healthcare</a>
+        <a href="education.html">Education</a>
+        <a href="hygiene.html">Hygiene</a>
+        <a href="water.html">Water</a>
+
+        <a class="active"
+           href="complaints.html">
+           Report
+        </a>
+
+        <a href="schemes.html">Schemes</a>
+
+    </nav>
+
+    <select id="language">
+        <option>English</option>
+        <option>मराठी</option>
+        <option>हिंदी</option>
+    </select>
+
+</header>
+
+
+<section class="page-banner">
+
+    <span>📝 COMMUNITY REPORTING</span>
+
+    <h1>Report a Village Problem</h1>
+
+    <p>
+        Your voice can help make our village better.
+    </p>
+
+</section>
+
+
+<section class="content-section">
+
+    <div class="form-container">
+
+        <h2>Submit Your Complaint</h2>
+
+        <p>
+            Tell us about an issue in your area.
+        </p>
+
+        <form id="complaintForm">
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div>
+
+                    <label>Mobile Number</label>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        placeholder="Enter mobile number"
+                        required>
+
+                </div>
+
+
+                <div>
+
+                    <label>Problem Category</label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option>Water</option>
+                        <option>Electricity</option>
+                        <option>Road</option>
+                        <option>Garbage</option>
+                        <option>Healthcare</option>
+                        <option>Education</option>
+                        <option>Agriculture</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>Location</label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Where is the problem?"
+                        required>
+
+                </div>
+
+
+                <div class="full">
+
+                    <label>
+                        Describe the Problem
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Explain the problem..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="full">
+
+                    <label>
+                        Upload Photo
+                    </label>
+
+                    <input
+                        type="file"
+                        accept="image/*">
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn">
+
+                Submit Complaint
+
+            </button>
+
+        </form>
+
+
+        <div
+            id="successMessage"
+            class="success-message">
+
+            ✅ Your complaint has been submitted
+            successfully!
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>🌱 Maza Gaon</h2>
+
+    <p>Your voice matters.</p>
+
+    <hr>
+
+    <p>© 2026 Maza Gaon</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
