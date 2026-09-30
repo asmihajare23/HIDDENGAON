@@ -1,4 +1,4 @@
-### `login.html`
+Save this as **`login.html`**:
 
 ```html
 <!DOCTYPE html>
@@ -6,187 +6,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maza Gaon - Login</title>
+
+    <title>Maza Gaon | Login</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", Arial, sans-serif;
         }
 
         body {
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #dff5d8, #a8d5a2);
+            overflow: hidden;
+            background: linear-gradient(
+                to bottom,
+                #87CEEB 0%,
+                #c8f0ff 45%,
+                #d8f3c5 100%
+            );
         }
 
-        .login-box {
-            width: 380px;
-            padding: 35px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        /* ---------------- BACKGROUND ---------------- */
+
+        .scene {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: -1;
         }
 
-        .logo {
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #2e7d32;
-            margin-bottom: 5px;
+        /* Sun */
+
+        .sun {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            background: #FFD54F;
+            border-radius: 50%;
+            top: 9%;
+            right: 12%;
+            box-shadow: 0 0 60px #FFD54F;
+            animation: sunGlow 3s infinite alternate;
         }
 
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 25px;
-        }
+        @keyframes sunGlow {
+            from {
+                box-shadow: 0 0 40px #FFD54F;
+            }
 
-        label {
-            display: block;
-            margin-bottom: 7px;
-            font-weight: bold;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 18px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #2e7d32;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            background: #2e7d32;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #1b5e20;
-        }
-
-        .register {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .register a {
-            color: #2e7d32;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        #message {
-            text-align: center;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="login-box">
-
-        <div class="logo">🌱 Maza Gaon</div>
-
-        <div class="subtitle">
-            Welcome to your village community
-        </div>
-
-        <form onsubmit="login(event)">
-
-            <label>Email / Mobile Number</label>
-            <input 
-                type="text" 
-                id="username"
-                placeholder="Enter email or mobile number"
-                required
-            >
-
-            <label>Password</label>
-            <input 
-                type="password" 
-                id="password"
-                placeholder="Enter password"
-                required
-            >
-
-            <button type="submit">Login</button>
-
-        </form>
-
-        <div id="message"></div>
-
-        <div class="register">
-            Don't have an account?
-            <a href="#">Register</a>
-        </div>
-
-    </div>
-
-    <script>
-
-        function login(event) {
-
-            event.preventDefault();
-
-            let username = document.getElementById("username").value;
-            let password = document.getElementById("password").value;
-            let message = document.getElementById("message");
-
-            if (username === "admin" && password === "1234") {
-
-                message.style.color = "green";
-                message.innerHTML = "Login successful!";
-
-                // Later you can redirect to dashboard
-                // window.location.href = "dashboard.html";
-
-            } else {
-
-                message.style.color = "red";
-                message.innerHTML = "Invalid username or password.";
-
+            to {
+                box-shadow: 0 0 80px #FFD54F;
             }
         }
 
-    </script>
+        /* Clouds */
 
-</body>
-</html>
+        .cloud {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            background: rgba(255,255,255,0.75);
+            border-radius: 50px;
+            filter: blur(1px);
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: "";
+            position: absolute;
+            background: inherit;
+            border-radius: 50%;
+        }
+
+        .cloud::before {
+            width: 70px;
+            height: 70px;
+            left: 25px;
+            bottom: 10px;
+        }
+
+        .cloud::after {
+            width: 55px;
+            height: 55px;
+            right: 25px;
+            bottom: 10px;
+        }
+
+        .cloud1 {
+            top: 15%;
+            left: -180px;
+            animation: moveCloud 30s linear infinite;
+        }
+
+        .cloud2 {
+            top: 28%;
+            left: -250px;
+            transform: scale(.7);
+            animation: moveCloud 42s linear infinite;
+            animation-delay: 8s;
+        }
+
+        @keyframes moveCloud {
+            from {
+                left: -250px;
+            }
+
+            to {
+                left: 110%;
+            }
+        }
+
+        /* Hills */
+
+        .hill {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 260px;
+            background: #4f8f46;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .hill.back {
+            bottom: 40px;
+            background: #76a85e;
+            transform: scale(1.2);
+        }
+
+        /* Fields */
+
+        .field {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background:
+                repeating-linear-gradient(
+                    165deg,
+                    #397a32 0px,
+                    #397a32 8px,
+                    #4e913d 8px,
+                    #4e913d 18px
+                );
+            clip-path: polygon(
+                0 35%,
+                100% 5%,
+                100% 100%,
+                0 100%
+            );
+        }
+
+        /* ---------------- LOGIN CARD ---------------- */
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            width: 420px;
+            padding: 38px;
+            border-radius: 28px;
+
+            background: rgba(255,255,255,0.82);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.18);
+
+            animation: cardAppear 1s ease;
+        }
+
+        @keyframes cardAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Logo */
+
+        .logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo-icon {
+            width: 75px;
+            height: 75px;
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 22px;
+
+            background: linear-gradient(
+                135deg,
+                #2e7d32,
+                #66bb6a
+            );
+
+            font-size: 40px;
+
+            box-shadow:
+                0 10px 25px rgba(46,125,50,.3);
+
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .logo h1 {
+            margin-top: 12px;
+            color: #245c28;
+            font-size: 30px;
+        }
+
+        .logo p {
+            color: #657267;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* Language */
+
+        .language {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .language button {
+            border: none;
+            background: transparent;
+            padding: 7px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #527157;
+            font-size: 12px;
+        }
+
+        .language button.active {
+            background: #e2f3df;
+            color: #28702e;
+            font-weight: bold;
+        }
+
+        /* Inputs */
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #344638;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box span {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 14px 45px;
+
+            border: 1px solid #d5e1d4;
+            border-radius: 13px;
+
+            outline: none;
 ```
-
-### How to run it
-
-1. Create a folder called **MazaGaon**.
-2. Inside it create a file named **`login.html`**.
-3. Paste the code.
-4. Save it.
-5. Open `login.html` in Chrome.
-
-For testing:
-
-**Username:** `admin`
-**Password:** `1234`
-
-This is only a **front-end demonstration login**. For your actual CEP project, we should later connect it to a **database/backend**, so villagers can actually register and log in securely.
-
-For your final **Maza Gaon** website, we can also add the **Marathi / हिंदी / English language selector directly on the login page**.
-
